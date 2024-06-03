@@ -13,13 +13,15 @@ public class PeopleEntity {
 
     @Id
     private String email;
-    private Address address;
+    private String country;
+    private String city;
+    private String zip;
     private  String[] roles;
     private LocalDate birthdate;
     private  String password;
 
-    private Name name;
-
+private String first;
+private String last;
     public PeopleEntity()
     {
 
@@ -33,13 +35,6 @@ public class PeopleEntity {
         this.email = email;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 
     public String[] getRoles() {
         return roles;
@@ -65,11 +60,45 @@ public class PeopleEntity {
         this.password = password;
     }
 
-    public Name getName() {
-        return name;
+
+
+    public String getCountry() {
+        return country;
     }
 
-    public void setName(Name name) {
-        this.name = name;
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public String getFirst() {
+        return first;
+    }
+
+    public void setFirst(String first) {
+        this.first = first;
+    }
+
+    public String getLast() {
+        return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
     }
 }

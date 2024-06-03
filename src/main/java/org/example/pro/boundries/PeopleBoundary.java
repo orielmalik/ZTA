@@ -25,20 +25,27 @@ public class PeopleBoundary {
 this.setBirthdate(entity.getBirthdate());
 this.setEmail(entity.getEmail());
 this.setPassword(entity.getPassword());
-this.setName(new Name(entity.getName().getFirst(),entity.getName().getLast()));
-this.setAddress(new Address(entity.getAddress().getCountry(),entity.getAddress().getCity()
-,entity.getAddress().getZip()));
+this.setName(new Name(entity.getFirst(),entity.getLast()));
+this.setAddress(new Address(entity.getCountry(),entity.getCity()
+,entity.getZip()));
 
     }
+
+
+
 
     public PeopleEntity toEntity()
     {
         PeopleEntity peopleEntity=new PeopleEntity();
         peopleEntity.setEmail(getEmail());
-        peopleEntity.setAddress(getAddress());
+        peopleEntity.setCity(getAddress().getCity());
+        peopleEntity.setCountry(getAddress().getCountry());
+        peopleEntity.setZip(getAddress().getZip());
         peopleEntity.setRoles(getRoles());
         peopleEntity.setBirthdate(getBirthdate());
-        peopleEntity.setName(getName());
+        peopleEntity.setFirst(getName().getFirst());
+        peopleEntity.setLast(getName().getLast());
+peopleEntity.setPassword(getPassword());
 
         return peopleEntity;
     }
