@@ -19,6 +19,7 @@ public class PeopleEntity {
     private  String[] roles;
     private LocalDate birthdate;
     private  String password;
+    private int age;//optional
 
 private String first;
 private String last;
@@ -100,5 +101,13 @@ private String last;
 
     public void setLast(String last) {
         this.last = last;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

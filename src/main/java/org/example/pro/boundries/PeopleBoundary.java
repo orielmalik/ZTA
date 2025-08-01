@@ -5,6 +5,7 @@ import org.example.pro.tools.Address;
 import org.example.pro.tools.Name;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class PeopleBoundary {
     private String email;
@@ -22,13 +23,14 @@ public class PeopleBoundary {
 
 
     public PeopleBoundary(PeopleEntity entity) {
-this.setBirthdate(entity.getBirthdate());
-this.setEmail(entity.getEmail());
-this.setPassword(entity.getPassword());
-this.setName(new Name(entity.getFirst(),entity.getLast()));
-this.setAddress(new Address(entity.getCountry(),entity.getCity()
-,entity.getZip()));
+        this.setBirthdate(entity.getBirthdate());
+        this.setEmail(entity.getEmail());
+        this.setPassword(entity.getPassword());
+        this.setName(new Name(entity.getFirst(),entity.getLast()));
+        this.setAddress(new Address(entity.getCountry(),entity.getCity()
+                ,entity.getZip()));
 
+        this.setRoles(entity.getRoles());
     }
 
 
@@ -45,8 +47,8 @@ this.setAddress(new Address(entity.getCountry(),entity.getCity()
         peopleEntity.setBirthdate(getBirthdate());
         peopleEntity.setFirst(getName().getFirst());
         peopleEntity.setLast(getName().getLast());
-peopleEntity.setPassword(getPassword());
-
+        peopleEntity.setPassword(getPassword());
+        peopleEntity.setAge((LocalDate.now().minusYears(getBirthdate().getYear())).getYear());
         return peopleEntity;
     }
 
