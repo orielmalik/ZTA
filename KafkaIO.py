@@ -7,7 +7,6 @@ from Requests.Logger import printerAnnotion, printer
 from Utils.Consts import *
 from Utils.SecurityUtils import *
 from Utils.ValidationUtils import isJWT
-from Service.PolicyService import *
 from Utils.ValidationUtils import *
 
 
@@ -17,10 +16,6 @@ class KafkaBase:
         self.topic_name = topic_name
         self.group_id = group_id
         self.loop = asyncio.get_event_loop()
-        self.service = PolicyService()
-
-    async def startDB(self):
-        await self.service.init()
 
 
 class KafkaProducerService(KafkaBase):
@@ -34,6 +29,10 @@ class KafkaProducerService(KafkaBase):
             loop=self.loop
         )
         await self.producer.start()
+        await self.producer.send_and_wait(self.topic_name)
+
+    async def sendProduce(self, message):
+        return await self.producer.send_and_wait(self.topic_name, message)
 
     async def stop_producer(self):
         if self.producer:
@@ -51,8 +50,6 @@ async def validateMsg(s):
         await printer(f"[KafkaConsumerService] Received: {decode_message(s, jwtsecret)}", "DEBUG")
         s = decode_message(s, jwtsecret)
         print(s)
-
-
     else:
         await printer(f"[KafkaConsumerService] Received: {s}")
 
@@ -75,14 +72,6 @@ class KafkaConsumerService(KafkaBase):
     async def stop(self):
         if self.consumer:
             await self.consumer.stop()
-
-    @printerAnnotion(typ="DEBUG")
-    async def crudOps(self, msg):
-        await validateMsg(msg)
-        await self.startDB()
-        await self.service.Create_users()
-        await self.service.Insert_users(msg, dict_to_tuple(fields_user))
-        return await self.service.findById((msg["id"]))
 
     async def consume_messages(self):
         if not self.consumer:
