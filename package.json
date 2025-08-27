@@ -1,0 +1,20 @@
+{
+  "name": "loggerservice",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pino": "^9.8.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

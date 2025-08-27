@@ -1,0 +1,18 @@
+{"level":30,"time":1755712633437,"pid":16896,"hostname":"DESKTOP-P675BUJ","msg":"Logger initialized"}
+{"level":30,"time":1755786720077,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"Logger initialized"}
+{"level":50,"time":1755787720145,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":50,"time":1755787720149,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$4] Create failed: ERROR WITH COUNTRY NAME"}
+{"level":50,"time":1755787750624,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":50,"time":1755787750625,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$4] Create failed: User already exists with this email"}
+{"level":50,"time":1755787789046,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":50,"time":1755787789047,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$4] Create failed: Send failed"}
+{"level":50,"time":1755787818978,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":50,"time":1755787818978,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$4] Create failed: Send failed"}
+{"level":50,"time":1755788105131,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":50,"time":1755788105138,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$4] Create failed: User already exists with this email"}
+{"level":30,"time":1755788118130,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":30,"time":1755788118130,"pid":24500,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$3] create-0@7"}
+{"level":30,"time":1756227511438,"pid":26216,"hostname":"DESKTOP-P675BUJ","msg":"Logger initialized"}
+{"level":50,"time":1756227784552,"pid":26216,"hostname":"DESKTOP-P675BUJ","msg":" {ip address } ::ffff:127.0.0.1"}
+{"level":50,"time":1756227784562,"pid":26216,"hostname":"DESKTOP-P675BUJ","msg":"null[lambda$create$4] Create failed: Send failed"}
+{"level":30,"time":1756293160675,"pid":14612,"hostname":"DESKTOP-P675BUJ","msg":"Logger initialized"}
